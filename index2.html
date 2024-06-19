@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Layanan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="time-container" id="time"></div>
+    <div class="container">
+        <h1>Formulir Layanan</h1>
+        <form id="contact-form" action="submit_form.php" method="post">
+            <div class="form-group">    
+                <label for="name">Nama:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="date">Tanggal:</label>
+                <input type="date" id="date" name="date" required>
+            </div>
+
+            <div class="form-group">
+                <label for="option">Tempat Nonton di:</label>
+                <select class="form-control" id="option" name="option" required>
+                    <option value="" disabled selected>Pilih salah satu</option>
+                    <option value="Jakarta">Jakarta</option>
+                    <option value="Bali">Bali</option>
+                    <option value="Yogyakarta">Yogyakarta</option>
+                    <option value="Pekanbaru">Pekanbaru</option>
+                    <option value="Kalimantan">Kalimantan</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Tingkat Kepuasan:</label><br>
+                <div class="rating-container">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" id="Kps1" name="kepuasan" value="Kurang Puas">
+                        <label class="form-check-label" for="Kps1">Kurang Puas</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" id="Kps2" name="kepuasan" value="Cukup Puas">
+                        <label class="form-check-label" for="Kps2">Cukup Puas</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" id="Kps3" name="kepuasan" value="Puas">
+                        <label class="form-check-label" for="Kps3">Puas</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" id="Kps4" name="kepuasan" value="Sangat Puas">
+                        <label class="form-check-label" for="Kps4">Sangat Puas</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Komentar/Masukan:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+            </div>
+
+            <button type="submit">Kirim</button>
+        </form>
+    </div>
+    <div id="confirmation-msg" style="display: none;">
+        Formulir berhasil dikirim!
+    </div>
+    
+    <script>
+        function updateTime() {
+            const now = new Date();
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const seconds = String(now.getSeconds()).padStart(2, '0');
+            const timeString = `${hours}:${minutes}:${seconds}`;
+            document.getElementById('time').textContent = timeString;
+        }
+
+        setInterval(updateTime, 1000); // Update the time every second
+        updateTime(); // Initial call to display the time immediately
+
+        // Add event listener for form submission
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+            alert('Formulir berhasil dikirim!');
+            document.getElementById('confirmation-msg').style.display = 'block';
+
+            // Optionally, you can submit the form data via AJAX here
+
+            // If you want to proceed with the actual form submission, remove the event.preventDefault() line
+            // and uncomment the following line
+            // this.submit();
+        });
+    </script>
+</body>
+</html>

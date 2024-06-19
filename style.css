@@ -1,0 +1,210 @@
+/* Resetting default margin and padding */
+body {
+    background-color: #0000006f; /* Warna latar belakang */
+    background-image: url('4.png'); /* Gambar latar belakang (opsional) */
+    background-size: cover; /* Menyesuaikan gambar latar belakang dengan ukuran window */
+    background-position: center; /* Posisi gambar latar belakang di tengah */
+    background-repeat: no-repeat; /* Menghindari pengulangan gambar latar belakang */
+}
+
+.container {
+    background-color: #ffffff; /* Warna latar belakang */
+    background-image: url('55.jpg'); /* Gambar latar belakang (opsional) */
+    background-size: cover; /* Menyesuaikan gambar latar belakang dengan ukuran container */
+    background-position: center; /* Posisi gambar latar belakang di tengah */
+    background-repeat: no-repeat; /* Menghindari pengulangan gambar latar belakang */
+    padding: 20px; /* Tambahkan padding agar konten tidak berdempetan dengan latar belakang */
+}
+
+.time-container {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: #ffffff;
+    font-size: 18px;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for better readability */
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: bold;
+}
+
+
+.container {
+    max-width: 800px;
+    margin: 50px auto; /* Mengatur agar container berada di tengah halaman */
+    padding: 20px;
+    border: 2px solid #ccc; /* Memberi bingkai dengan warna abu-abu */
+    border-radius: 10px; /* Memuluskan sudut bingkai */
+    text-align: center; /* Membuat konten di dalam container berada di tengah */
+}
+
+img {
+    max-width: 30%; /* Maksimum lebar gambar adalah lebar container */
+    height: auto; /* Menjaga rasio aspek gambar */
+    display: block; /* Memastikan gambar diatur dengan benar */
+    margin: 0 auto; /* Memposisikan gambar di tengah */
+    border: 1px solid #ffffff; /* Contoh bingkai untuk gambar */
+    border-radius: 5px; /* Memuluskan sudut bingkai */
+}
+
+/* style.css */
+body {
+    font-family: Arial, sans-serif;
+    color:#b57f0a;
+}
+
+h1 {
+    font-family: 'Times New Roman', sans-serif;
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #b57f0a;
+}
+
+h2 {
+    font-family: 'Verdana', sans-serif;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+p, button {
+    font-family: 'Courier New', monospace;
+}
+
+/* Styling untuk media container */
+.media-container {
+    margin-top: 20px;
+}
+
+/* Styling untuk tombol */
+#nextPageButton {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#nextPageButton:hover {
+    background-color: #45a049;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px; 
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #ffffff;
+    font-size: 50px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #ffffff;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px; /* Increased font size */
+    box-sizing: border-box;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 15px; /* Increased padding */
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 18px; /* Increased font size */
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+    h1 {
+        font-size: 28px;
+    }
+    h2 {
+        font-size: 20px;
+    }
+}
+
+.rating-container {
+    display: flex;
+    padding: 20px ;
+    margin-bottom:5px;
+}
+.form-check-label {
+    margin-right: 15px;
+    font-size: 1em; /* Enlarge label font size */
+}
+.form-check-input {
+    width: 20px; /* Enlarge radio button width */
+    height: 20px; /* Enlarge radio button height */
+}
+.form-control {
+    font-size: 1.2em; /* Enlarge font size */
+    padding: 10px; /* Add padding */
+    border-radius: 4px; /* Round corners */
+    border: 1px solid #ccc; /* Add border */
+    width: 100%; /* Full width */
+    max-width: 400px; /* Max width */
+    margin: 10px 0; /* Add margin */
+    box-sizing: border-box;
+}
+
+/* Style untuk form-group */
+.form-group {
+    margin-bottom: 1rem;
+}
+
+/* Style untuk select dropdown */
+#option {
+    width: 100%; /* Lebar sesuai dengan container */
+    padding: 10px; /* Padding untuk penampilan yang lebih baik */
+    font-size: 16px; /* Ukuran font standar */
+    border: 1px solid #ccc; /* Garis tepi dengan warna abu-abu */
+    border-radius: 4px; /* Border radius untuk sudut yang lebih halus */
+    box-sizing: border-box; /* Box-sizing untuk memperhitungkan border dan padding dalam ukuran total */
+}
+
+    
